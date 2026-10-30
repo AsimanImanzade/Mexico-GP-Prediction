@@ -1,0 +1,12 @@
+pandas
+numpy
+scipy
+requests
+scikit-learn
+lightgbm
+xgboost
+joblib
+fastf1
+matplotlib
+jupyter
+pytest

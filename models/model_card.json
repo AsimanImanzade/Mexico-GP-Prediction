@@ -1,0 +1,242 @@
+{
+  "chosen": {
+    "pre_weekend": {
+      "members": [
+        "XGBoost",
+        "Logistic regression"
+      ],
+      "params": {
+        "XGBoost": {
+          "learning_rate": 0.03,
+          "max_depth": 3
+        },
+        "Logistic regression": {
+          "C": 0.03
+        }
+      },
+      "weighting": {
+        "half_life": 2,
+        "era_boost": 1
+      },
+      "validation": {
+        "races": 90.0,
+        "log_loss": 1.445,
+        "top1_acc": 0.511,
+        "top3_acc": 0.8,
+        "winner_prob": 0.365,
+        "brier": 0.627
+      }
+    },
+    "post_quali": {
+      "members": [
+        "XGBoost"
+      ],
+      "params": {
+        "XGBoost": {
+          "learning_rate": 0.03,
+          "max_depth": 5
+        }
+      },
+      "weighting": {
+        "half_life": 4,
+        "era_boost": 1
+      },
+      "validation": {
+        "races": 90.0,
+        "log_loss": 1.202,
+        "top1_acc": 0.589,
+        "top3_acc": 0.889,
+        "winner_prob": 0.439,
+        "brier": 0.553
+      }
+    }
+  },
+  "feature_sets": {
+    "pre_weekend": [
+      "drv_ewm_finish",
+      "drv_ewm_points",
+      "drv_last_finish",
+      "drv_ewm_quali_pos",
+      "drv_ewm_quali_gap",
+      "drv_dnf_rate_10",
+      "drv_season_pts",
+      "drv_season_wins",
+      "drv_season_podiums",
+      "drv_season_tm_h2h",
+      "drv_season_pts_share",
+      "drv_season_rank",
+      "drv_starts",
+      "drv_career_wins",
+      "drv_career_win_rate",
+      "drv_age",
+      "team_ewm_points",
+      "team_ewm_best_finish",
+      "team_ewm_quali_gap",
+      "team_dnf_rate_10",
+      "team_season_pts",
+      "team_season_rank",
+      "drv_elo",
+      "team_elo",
+      "drv_elo_gap_to_best",
+      "team_elo_gap_to_best",
+      "drv_circuit_starts",
+      "drv_circuit_wins",
+      "drv_circuit_podiums",
+      "drv_circuit_avg_finish",
+      "team_circuit_best_finish",
+      "is_high_altitude",
+      "drv_altitude_avg_finish",
+      "circuit_pole_win_rate",
+      "circuit_winner_avg_grid",
+      "circuit_overtaking",
+      "new_regs_season",
+      "season_progress",
+      "races_into_era",
+      "is_sprint_weekend",
+      "drv_last2_avg_finish",
+      "drv_last3_avg_points",
+      "drv_last3_avg_quali_pos",
+      "drv_wins_last5",
+      "drv_season_avg_finish",
+      "drv_season_avg_quali_gap",
+      "drv_season_win_rate",
+      "drv_form_trend",
+      "drv_ewm_fastest_lap_rank",
+      "drv_ewm_positions_gained",
+      "drv_team_pts_share",
+      "team_last2_points",
+      "team_last2_best_finish",
+      "team_last3_quali_gap",
+      "team_season_avg_points",
+      "team_season_avg_quali_gap",
+      "team_form_trend",
+      "team_prev_season_rank",
+      "drv_ewm_finish_rank",
+      "drv_ewm_points_rank",
+      "drv_ewm_quali_gap_rank",
+      "team_ewm_points_rank",
+      "team_ewm_quali_gap_rank",
+      "drv_elo_rank",
+      "team_elo_rank",
+      "drv_last3_avg_points_rank",
+      "team_last2_points_rank",
+      "drv_season_avg_quali_gap_rank",
+      "team_season_avg_quali_gap_rank",
+      "drv_ewm_fastest_lap_rank_rank"
+    ],
+    "post_quali": [
+      "drv_ewm_finish",
+      "drv_ewm_points",
+      "drv_last_finish",
+      "drv_ewm_quali_pos",
+      "drv_ewm_quali_gap",
+      "drv_dnf_rate_10",
+      "drv_season_pts",
+      "drv_season_wins",
+      "drv_season_podiums",
+      "drv_season_tm_h2h",
+      "drv_season_pts_share",
+      "drv_season_rank",
+      "drv_starts",
+      "drv_career_wins",
+      "drv_career_win_rate",
+      "drv_age",
+      "team_ewm_points",
+      "team_ewm_best_finish",
+      "team_ewm_quali_gap",
+      "team_dnf_rate_10",
+      "team_season_pts",
+      "team_season_rank",
+      "drv_elo",
+      "team_elo",
+      "drv_elo_gap_to_best",
+      "team_elo_gap_to_best",
+      "drv_circuit_starts",
+      "drv_circuit_wins",
+      "drv_circuit_podiums",
+      "drv_circuit_avg_finish",
+      "team_circuit_best_finish",
+      "is_high_altitude",
+      "drv_altitude_avg_finish",
+      "circuit_pole_win_rate",
+      "circuit_winner_avg_grid",
+      "circuit_overtaking",
+      "new_regs_season",
+      "season_progress",
+      "races_into_era",
+      "is_sprint_weekend",
+      "drv_last2_avg_finish",
+      "drv_last3_avg_points",
+      "drv_last3_avg_quali_pos",
+      "drv_wins_last5",
+      "drv_season_avg_finish",
+      "drv_season_avg_quali_gap",
+      "drv_season_win_rate",
+      "drv_form_trend",
+      "drv_ewm_fastest_lap_rank",
+      "drv_ewm_positions_gained",
+      "drv_team_pts_share",
+      "team_last2_points",
+      "team_last2_best_finish",
+      "team_last3_quali_gap",
+      "team_season_avg_points",
+      "team_season_avg_quali_gap",
+      "team_form_trend",
+      "team_prev_season_rank",
+      "drv_ewm_finish_rank",
+      "drv_ewm_points_rank",
+      "drv_ewm_quali_gap_rank",
+      "team_ewm_points_rank",
+      "team_ewm_quali_gap_rank",
+      "drv_elo_rank",
+      "team_elo_rank",
+      "drv_last3_avg_points_rank",
+      "team_last2_points_rank",
+      "drv_season_avg_quali_gap_rank",
+      "team_season_avg_quali_gap_rank",
+      "drv_ewm_fastest_lap_rank_rank",
+      "grid_pos",
+      "front_row",
+      "quali_position",
+      "quali_gap_pct",
+      "tm_quali_gap",
+      "grid_penalty",
+      "sprint_pos"
+    ]
+  },
+  "test": {
+    "pre_weekend_2025": {
+      "races": 24.0,
+      "log_loss": 1.5861825549157873,
+      "top1_acc": 0.375,
+      "top3_acc": 0.875,
+      "winner_prob": 0.24922942857373398,
+      "brier": 0.7684042281134147
+    },
+    "pre_weekend_2026": {
+      "races": 18.0,
+      "log_loss": 1.705451389297326,
+      "top1_acc": 0.4444444444444444,
+      "top3_acc": 0.7777777777777778,
+      "winner_prob": 0.24888455766329512,
+      "brier": 0.7629270183830248
+    },
+    "post_quali_2025": {
+      "races": 24.0,
+      "log_loss": 1.043092131614685,
+      "top1_acc": 0.625,
+      "top3_acc": 1.0,
+      "winner_prob": 0.3995702266693115,
+      "brier": 0.5793898524035939
+    },
+    "post_quali_2026": {
+      "races": 18.0,
+      "log_loss": 0.811838686466217,
+      "top1_acc": 0.7222222222222222,
+      "top3_acc": 0.9444444444444444,
+      "winner_prob": 0.5081170797348022,
+      "brier": 0.3912746305693363
+    }
+  },
+  "trained_through": "2026_18"
+}
